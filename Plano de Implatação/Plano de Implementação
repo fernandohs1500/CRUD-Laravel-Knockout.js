@@ -1,0 +1,42 @@
+Foi decidido a criação do sistema utilizando uma estrutura com o front-end e o back-end totalmente separados para uma melhor separação de tarefas.
+
+O front-end se comunica com o back-end através de chamadas ajax.
+
+O sistema deve ser implantado em um servidor com Apache e com PHP 5.6+
+
+O sitema utiliza a o template sb2-admin.
+Link: https://blackrockdigital.github.io/startbootstrap-sb-admin-2/pages/index.html
+
+O sistema utiliza o Framework Laravel como backend.
+
+O sitema utiliza a biblioteca knockout.js + Bootstrap como frontend.
+
+O sistema utiliza o banco de dados MysqlServer, cujo arquivo de criação está em anexo (luxfacta.sql).
+
+As configurações do banco de dados se encontram no arquivo .env dentro do laravel.
+
+O acesso ao codigo fonte da aplicação se encontra no github.
+
+As urls das chamadas ajax se encontram nos arquivos html dentro de /pages.
+
+Foram criadas algumas funcionalidades extras:
+ - Campos a mais
+ - Edição
+ - Deleção
+ - Paginação
+
+- Para rodar o ambiente localmente é necessario configurar o backend como um virtualhost, para isso siga os seguintes passos:
+
+Criar o virtualhost:
+
+Arquivo: backend-luxfacta.conf
+<VirtualHost *:80>
+	ServerName luxfacta.dev
+	ServerAdmin webmaster@localhost
+	DocumentRoot /var/www/html/backend-luxfacta/public
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+Editar o arquivo de hosts:
+127.0.1.1      luxfacta.dev

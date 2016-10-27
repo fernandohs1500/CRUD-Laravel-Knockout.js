@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>LuxFact - Cadastro de Produtos</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">LUXFACT - Admin</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Produtos<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="products.html">Listar</a>
+                                </li>
+                                <li>
+                                    <a href="form.html">Cadastrar</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Produtos</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row" id="formEdit">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Preencha o Formulário
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                              <form role="form">
+                                <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label>Nome</label>
+                                            <input class="form-control" data-bind="value: nome" autofocus>
+                                            <p class="help-block">Nome do Produto.</p>
+                                        </div>
+
+										<div class="form-group">
+                                            <label>Preço</label>
+                                            <input class="form-control"  data-bind="value: preco">
+                                            <p class="help-block">Valor do Produto.</p>
+                                        </div>
+
+										<div class="form-group">
+                                            <label>Estoque</label>
+                                            <input class="form-control" data-bind="value: estoque" type="number">
+                                            <p class="help-block">Quantidade de Produto disponível.</p>
+                                        </div>
+
+										<div class="form-group">
+	                                        <label>EAN</label>
+	                                        <input class="form-control" data-bind="value: ean">
+	                                        <p class="help-block">Codigo do produto.</p>
+	                                    </div>
+
+										<div class="form-group">
+                                            <label>Data de cadastro</label>
+                                            <input class="form-control" data-bind="value: dat_cadastro, disable:true">
+                                            <p class="help-block">Data de cadastro.</p>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-default" data-bind="click: criarProduto">Salvar</button>
+                                        <button type="reset" class="btn btn-default">Limpar</button>
+                                </div>
+
+                                <div class="col-lg-6">
+							
+									<div class="form-group">
+                                        <label>Marca</label>
+                                        <select class="form-control" data-bind="options: marcas, optionsText: 'nom_marca', optionsValue: 'cod_marca', value:marca, optionsCaption: 'Selecionar...' ">
+                                        </select>
+                                        <p class="help-block">Marca do Produto.</p>
+                                    </div>
+
+									<div class="form-group">
+                                        <label>Fornecedor</label>
+                                        <select class="form-control" data-bind="options: fornecedores, optionsText: 'nom_fornecedor', optionsValue: 'cod_fornecedor', value:fornecedor, optionsCaption: 'Selecionar...'">
+                                        </select>
+                                        <p class="help-block">Fornecedor.</p>
+                                    </div>
+
+									<div class="form-group">
+                                        <label>Categoria</label>
+										<select class="form-control" data-bind="options: categorias, optionsText: 'nom_categoria', optionsValue: 'cod_categoria', value:categoria, optionsCaption: 'Selecionar...'">
+                                        </select>
+                                        <p class="help-block">Categoria.</p>
+                                    </div>
+
+									<div class="form-group">
+                                        <label>Observaçoes</label>
+										<textarea class="form-control" rows="3" data-bind="value: observacoes"></textarea>
+                                        <p class="help-block">Observacoes.</p>
+                                    </div>
+
+								</div>
+
+								</form>
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+    <script src="../js/knockout-3.4.0.js"></script>
+
+    <script src="../js/modules/products.js"></script>
+
+</body>
+
+</html>
