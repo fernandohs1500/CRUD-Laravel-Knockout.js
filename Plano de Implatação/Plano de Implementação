@@ -11,11 +11,15 @@ O sistema utiliza o Framework Laravel como backend.
 
 O sitema utiliza a biblioteca knockout.js + Bootstrap como frontend.
 
-O sistema utiliza o banco de dados MysqlServer, cujo arquivo de criação está em anexo (luxfacta.sql).
+O sistema utiliza o banco de dados MysqlServer, cujo arquivo de criação e a modelagem está em anexo(luxfacta.sql, der luxfact.png).
+
+O sistema pode ser acessado online no seguinte endereço:
+http://luxfacta.gessovitoriaudi.com.br/front/
 
 As configurações do banco de dados se encontram no arquivo .env dentro do laravel.
 
 O acesso ao codigo fonte da aplicação se encontra no github.
+https://github.com/fernandohs1500/desafioluxfacta
 
 As urls das chamadas ajax se encontram nos arquivos html dentro de /pages.
 

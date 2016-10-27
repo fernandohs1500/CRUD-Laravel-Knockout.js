@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 27-Out-2016 às 17:10
+-- Generation Time: 27-Out-2016 às 18:37
 -- Versão do servidor: 5.7.15-0ubuntu0.16.04.1
 -- PHP Version: 7.0.8-0ubuntu0.16.04.3
 
@@ -97,7 +97,7 @@ CREATE TABLE `produtos` (
   `cod_ean` char(15) DEFAULT NULL,
   `cod_fornecedor` int(11) DEFAULT NULL,
   `dsc_observacoes` text,
-  `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

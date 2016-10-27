@@ -1,6 +1,6 @@
 var PagedGridModel = function(items) {
     var self = this;
-    this.url = "http://luxfacta.dev/produto/";
+    this.url = "http://beckendluxfacta.gessovitoriaudi.com.br/produto/";
     this.items = ko.observableArray(items);
 
     this.sorterProduto = 1;
@@ -128,7 +128,7 @@ var PagedGridModel = function(items) {
 
 };
 
-var urlBackEnd = 'http://luxfacta.dev/';
+var urlBackEnd = 'http://beckendluxfacta.gessovitoriaudi.com.br/';
 function loadGrid(){
     $.ajax({
         url: urlBackEnd + 'produtos/all',

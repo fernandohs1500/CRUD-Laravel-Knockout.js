@@ -2,7 +2,7 @@ var modelProduct = function(){
 
     var self = this;
 
-    this.url = 'http://luxfacta.dev/produto/';
+    this.url = 'http://beckendluxfacta.gessovitoriaudi.com.br/produto/';
 
     this.nome = ko.observable("");
     this.preco = ko.observable("");
